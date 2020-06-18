@@ -94,7 +94,10 @@
             <div class="info_content d-flex flex-row align-items-center justify-content-start">
                 <!-- Đăng nhập --->
                 <div class="info_languages has_children">
-                    <i class='far fa-user-circle' style="color: #FFF; font-size: 18px"></i> <a href="" style="color: #FFF;">ĐĂNG NHẬP</a>
+                    <i class='far fa-user-circle' style="color: #FFF; font-size: 18px"></i>
+                    <button type="button" data-toggle="modal" data-target="#myModal" style="background-color: #1a1a1a; color: #FFF; border: none; cursor: pointer;">
+                        ĐĂNG NHẬP
+                    </button>
                 </div>
                 <!-- Đăng tin --->
                 <div class="info_currencies has_children">
@@ -135,6 +138,29 @@
                 <div class="cart_num">2</div>
             </a></div>
             <div class="cart_text">TIN LƯU</div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="title align-middle">LOGIN</h2>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="text-center justify-content-center">
+                        <label for="">Email:</label><br>
+                        <input type="text" placeholder="Điền email vào đây..." name="email" style="padding: 5px; width: 300px;"><br>
+                        <label for="">Password:</label><br>
+                        <input type="password" name="password" placeholder="Điền password vào đây..." id="" style="padding: 5px; width: 300px;"><br>
+                        <a href="#" style="padding: 5px;">Quên mật khẩu?</a>
+                        <button type="submit" class="btn btn-primary" style="margin-top: 5px; margin-left: 120px;">Login</button>
+                    </form>   
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
     </div>
     @section('content')
