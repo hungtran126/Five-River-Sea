@@ -147,7 +147,7 @@
                     <h2 class="title align-middle">LOGIN</h2>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" style="text-align: center;">
                     <form action="" class="text-center justify-content-center">
                         <label for="">Email:</label><br>
                         <input type="text" placeholder="Điền email vào đây..." name="email" style="padding: 5px; width: 300px;"><br>
@@ -155,7 +155,8 @@
                         <input type="password" name="password" placeholder="Điền password vào đây..." id="" style="padding: 5px; width: 300px;"><br>
                         <a href="#" style="padding: 5px;">Quên mật khẩu?</a>
                         <button type="submit" class="btn btn-primary" style="margin-top: 5px; margin-left: 120px;">Login</button>
-                    </form>   
+                    </form>
+                    <a href="#" class="btn btn-success col-md-8">Tạo tài khoản</a>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
