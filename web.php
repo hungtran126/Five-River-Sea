@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 // Trang chủ 
 Route::get('/','homeController@index');
+Route::get('/createuser','homeController@createUser');
+Route::get('/createuser/login','homeController@getcreateUser');
 Route::get('/about','homeController@about');
 Route::get('/chat','homeController@chat');
 Route::get('/ibuy','homeController@ibuy');
