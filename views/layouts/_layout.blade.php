@@ -35,7 +35,7 @@
             <nav class="header_nav">
                 <ul class="d-flex flex-row align-items-center justify-content-start">
                     <li><a href="/">Home</a></li>
-                    <li><a href="#">Tôi bán</a></li>
+                    <li><a href="/post">Tôi bán</a></li>
                     <li><a href="#">Chat</a></li>
                     <li><a href="#">Thông báo</a></li> 
                     <li><a href="#">About us</a></li>
@@ -67,7 +67,7 @@
         <nav class="menu_nav">
             <ul class="menu_mm">
                 <li class="menu_mm"><a href="/">Home</a></li>
-                <li class="menu_mm"><a href="#">Tôi bán</a></li>
+                <li class="menu_mm"><a href="post">Tôi bán</a></li>
                 <li class="menu_mm"><a href="#">Chat</a></li>
                 <li class="menu_mm"><a href="#">Thông báo</a></li>
                 <li class="menu_mm"><a href="#">About us</a></li>
