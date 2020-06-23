@@ -34,6 +34,6 @@ Route::get('/admin/user','adminController@user');
 Route::get('/admin/login','loginController@checkLogin');
 Route::get('/admin/logout','loginController@logout');
 // Đăng tin
-Route::get('/dangtin','homeController@dangtin');
+Route::get('/dangtin','homeController@post');
 
 
