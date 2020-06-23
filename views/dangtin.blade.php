@@ -4,8 +4,8 @@
     <div class="section_container">
         <div class="container">
             <h1>Đăng Tin Của Bạn</h1>
-            <form action="{{ route('addimage')}}" method="post">
-                {{ csrf_field() }}
+            <form action="{{}}" method="post">
+                @csrf
                 <div class="form-group">
                     <label>Chọn danh mục đăng tin</label>
                     <select class="form-control" id="">
@@ -74,27 +74,7 @@
                 </div>!-->
                 <button type="submit" class="btn btn-black">Đăng Bán</button>
             </form>
-            <!--<form method="post" action="">
-                @csrf
-                <div class="form-group">
-                    <label for="name">Tên</label>
-                    <input type="text" class="form-control" name="origin"/>
-                    
-                </div>
-                <div class="form-group">
-                    <label for="des"></label>
-                    <input type="text" class="form-control" name="destination"/>
-                    @if($errors->has('origin'))
-                    <p> - {{$errors->first('destination')}}</p>
-                    @endif
-                </div>
-                <div class="form-group">
-                    <label for="dur">Duration</label>
-                    <input type="number" class="form-control" name="duration"/>
-                </div>
-                <button type="submit" class="btn btn-block btn-danger">Create data</button>
-            </form>
-            !-->
+            
         </div>
     </div>
     
