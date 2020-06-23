@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Trang chủ 
+// Trang chủ
+Route::get('/category/{id}','productController@product');
+Route::get('/detail/{id}','productController@detail');
 Route::get('/','homeController@index');
 Route::get('/createuser','homeController@createUser');
 Route::get('/createuser/login','homeController@getcreateUser');
