@@ -39,4 +39,7 @@ class homeController extends Controller
     public function ibuy(){
         return view('ibuy');
     }
+    public function post(){
+        return view('dangtin');
+    }
 }
