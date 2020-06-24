@@ -328,5 +328,6 @@
     <script src="{{asset('plugins')}}/Isotope/isotope.pkgd.min.js"></script>
     <script src="{{asset('plugins')}}/Isotope/fitcolumns.js"></script>
     <script src="{{asset('js')}}/custom.js"></script>
+    @include('sweetalert::alert')
 </body>
 </html>
