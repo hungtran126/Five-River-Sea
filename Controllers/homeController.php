@@ -3,7 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
+use App\tbluser;
+use App\productt;
+use App\catalog;
+use App\quan;
+use App\thanhpho;
 class homeController extends Controller
 {
     public function index(){
@@ -40,6 +46,7 @@ class homeController extends Controller
         return view('ibuy');
     }
     public function post(){
-        return view('dangtin');
+        $cates=catalog::all();
+        return view('dangtin',['listcate'=>$cates]);
     }
 }
