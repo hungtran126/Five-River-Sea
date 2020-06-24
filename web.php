@@ -35,5 +35,6 @@ Route::get('/admin/login','loginController@checkLogin');
 Route::get('/admin/logout','loginController@logout');
 // Đăng tin
 Route::get('/post','homeController@post');
-
+Route::get('/post/create','homeController@createpost');
+Route::get('/post/loc','homeController@filtercity');
 
