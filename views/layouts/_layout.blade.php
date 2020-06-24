@@ -15,8 +15,13 @@
     <link rel="stylesheet" type="text/css" href="{{asset('styles')}}/blog.css">
     <link rel="stylesheet" type="text/css" href="{{asset('styles')}}/blog_responsive.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js"></script>
     <link rel="shortcut icon" type="image/png" href="{{asset('images')}}/icon1.png"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('styles')}}/NhatQuangCss.css">
 </head>
 <body>
 <div class="super_container">
@@ -94,14 +99,35 @@
             <div class="info_content d-flex flex-row align-items-center justify-content-start">
                 <!-- Đăng nhập --->
                 <div class="info_languages has_children">
-                    <i class='far fa-user-circle' style="color: #FFF; font-size: 18px"></i>
-                    <button type="button" data-toggle="modal" data-target="#myModal" style="background-color: #1a1a1a; color: #FFF; border: none; cursor: pointer;">
-                        ĐĂNG NHẬP
-                    </button>
-                </div>
+                    @if(!session('user'))
+                        <i class='far fa-user-circle' style="color: #FFF; font-size: 18px"></i>
+                        <button type="button" data-toggle="modal" data-target="#myModal" style="background-color: #1a1a1a; color: #FFF; border: none; cursor: pointer;">
+                            ĐĂNG NHẬP
+                        </button>
+                    @else
+                    <div class="dropdown show">
+                        <a href="#" class="btn dropdown-toggle" style="color: #FFF; font-size: 16px" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span><span style="color: #7d7d7d;">Hi</span> {{ session('user')->user }}</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                            <a href="/logout" class="dropdown-item">Đăng xuất</a>
+                        </div>
+                    </div>
+                    <script>
+                        $(document).ready(function(){
+                        $(".dropdown-toggle").dropdown();
+                        });
+                    </script>
+                    @endif
+                </div>                
                 <!-- Đăng tin --->
                 <div class="info_currencies has_children">
-                <i class='far fa-edit' style="color: #FFF; font-size: 18px"></i> <a href="/post" style="color: #FFF;">ĐĂNG TIN</a>
+                <i class='far fa-edit' style="color: #FFF; font-size: 18px"></i> 
+                @if(!session('user'))                  
+                    <a href="/post" id="postt" data-toggle="modal" data-target="#myModal" style="color: #FFF;">ĐĂNG TIN</a>
+                @else
+                    <a href="/post" style="color: #FFF;">ĐĂNG TIN</a>
+                @endif
                 </div>
 
             </div>
@@ -140,6 +166,7 @@
             <div class="cart_text">TIN LƯU</div>
         </div>
     </div>
+    <!-- Modal login -->
     <div class="modal fade" id="myModal">
         <div class="modal-dialog modal-md">
             <div class="modal-content">
